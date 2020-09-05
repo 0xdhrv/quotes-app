@@ -14,7 +14,6 @@ import {
 import { useState } from 'react';
 import Head from 'next/head';
 import { NextSeo } from 'next-seo';
-import { motion } from 'framer-motion';
 import { Moon, Sun, GitHub, ExternalLink } from 'react-feather';
 
 export async function getStaticProps() {
@@ -41,7 +40,7 @@ export default function Home({ quoteInitial }) {
     if (res.ok) {
       const json = await res.json();
       const quote = json.quote;
-      console.log('Hey ' + quote);
+      // console.log('Hey ' + quote);
       return setState({ quote: quote, loading: false, success: true });
     }
     setState({ quote, loading: false });
@@ -56,7 +55,6 @@ export default function Home({ quoteInitial }) {
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"></link>
         <link rel="manifest" href="/site.webmanifest"></link>
         <meta name="theme-color" content={theme.colors?.primary} />
-        <link rel="stylesheet" href="styles/font.css" />
       </Head>
       <Container
         sx={{
@@ -162,10 +160,14 @@ export default function Home({ quoteInitial }) {
           </Box>
           <Box p={3}>
             <Heading sx={{ fontSize: 1, px: 2 }}>
-              <Link p={2} href="https://github.com/0xdhrv/quotes-app" target="_blank">
+              <Link
+                p={2}
+                href="https://github.com/0xdhrv/quotes-app"
+                target="_blank"
+                rel="noreferrer">
                 <GitHub />
               </Link>
-              <Link p={2} href="https://dhrv.pw/" target="_blank">
+              <Link p={2} href="https://dhrv.pw/" target="_blank" rel="noreferrer">
                 <ExternalLink />
               </Link>
             </Heading>
