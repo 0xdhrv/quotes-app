@@ -160,16 +160,16 @@ export default function Home({ quoteInitial }) {
           </Box>
           <Box p={3}>
             <Heading sx={{ fontSize: 1, px: 2 }}>
-              <Link
+              <IconButton
                 p={2}
                 href="https://github.com/0xdhrv/quotes-app"
                 target="_blank"
                 rel="noreferrer">
                 <GitHub />
-              </Link>
-              <Link p={2} href="https://dhrv.pw/" target="_blank" rel="noreferrer">
+              </IconButton>
+              <IconButton p={2} href="https://dhrv.pw/" target="_blank" rel="noreferrer">
                 <ExternalLink />
-              </Link>
+              </IconButton>
             </Heading>
           </Box>
         </Flex>
