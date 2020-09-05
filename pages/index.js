@@ -8,8 +8,7 @@ import {
   Box,
   Spinner,
   useColorMode,
-  IconButton,
-  Link
+  IconButton
 } from 'theme-ui';
 import { useState } from 'react';
 import Head from 'next/head';
@@ -159,22 +158,30 @@ export default function Home({ quoteInitial }) {
             </IconButton>
           </Box>
           <Box p={3}>
-            <Heading sx={{ fontSize: 1, px: 2 }}>
-              <IconButton
-                aria-label="Source Code"
-                p={2}
-                href="https://github.com/0xdhrv/quotes-app"
-                target="_blank"
-                rel="noreferrer">
-                <GitHub />
+            <Heading sx={{ fontSize: 1 }}>
+              <IconButton aria-label="Source Code">
+                <a
+                  sx={{
+                    cursor: 'pointer'
+                  }}
+                  name="Source Code"
+                  href="https://github.com/0xdhrv/quotes-app"
+                  target="_blank"
+                  rel="noreferrer">
+                  <GitHub />
+                </a>
               </IconButton>
-              <IconButton
-                aria-label="Author Website"
-                p={2}
-                href="https://dhrv.pw/"
-                target="_blank"
-                rel="noreferrer">
-                <ExternalLink />
+              <IconButton aria-label="Author Website">
+                <a
+                  sx={{
+                    cursor: 'pointer'
+                  }}
+                  name="Author Website"
+                  href="https://dhrv.pw/"
+                  target="_blank"
+                  rel="noreferrer">
+                  <ExternalLink />
+                </a>
               </IconButton>
             </Heading>
           </Box>
