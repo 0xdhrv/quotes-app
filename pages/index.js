@@ -161,13 +161,19 @@ export default function Home({ quoteInitial }) {
           <Box p={3}>
             <Heading sx={{ fontSize: 1, px: 2 }}>
               <IconButton
+                aria-label="Source Code"
                 p={2}
                 href="https://github.com/0xdhrv/quotes-app"
                 target="_blank"
                 rel="noreferrer">
                 <GitHub />
               </IconButton>
-              <IconButton p={2} href="https://dhrv.pw/" target="_blank" rel="noreferrer">
+              <IconButton
+                aria-label="Author Website"
+                p={2}
+                href="https://dhrv.pw/"
+                target="_blank"
+                rel="noreferrer">
                 <ExternalLink />
               </IconButton>
             </Heading>
